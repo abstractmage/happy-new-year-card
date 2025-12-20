@@ -1,0 +1,27 @@
+.main {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  animation: spin 2s infinite linear;
+}
+
+.main span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 22px;
+  transform-origin: 0 0;
+}
+
+/* Расставляем снежинки по кругу */
+.main span:nth-child(1) { transform: rotate(0deg)   translate(30px); }
+.main span:nth-child(2) { transform: rotate(60deg)  translate(30px); }
+.main span:nth-child(3) { transform: rotate(120deg) translate(30px); }
+.main span:nth-child(4) { transform: rotate(180deg) translate(30px); }
+.main span:nth-child(5) { transform: rotate(240deg) translate(30px); }
+.main span:nth-child(6) { transform: rotate(300deg) translate(30px); }
+
+@keyframes spin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

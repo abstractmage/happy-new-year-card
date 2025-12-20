@@ -1,0 +1,26 @@
+.inner {
+  animation: scroll 100000ms linear forwards;
+  animation-play-state: running;
+  color: oklch(.7 .15 145);
+  font-style: italic;
+}
+
+.inner.paused {
+  animation-play-state: paused;
+}
+
+.row {
+  text-shadow:
+    0 1px 2px rgba(0,0,0,0.7),
+    0 0 10px rgba(0,0,0,0.5);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(100vh);
+  }
+  
+  100% {
+    transform: translateY(-100%);
+  }
+}

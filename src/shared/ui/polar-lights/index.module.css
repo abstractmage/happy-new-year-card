@@ -1,0 +1,32 @@
+.aurora {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(120deg, rgba(0,255,180,0.5), rgba(0,128,255,0.3), rgba(0,255,120,0.2));
+  filter: blur(120px);
+  animation: wave 20s ease-in-out infinite alternate, shimmer 6s ease-in-out infinite alternate;
+  opacity: 0;
+}
+
+.aurora:nth-child(2) {
+  background: linear-gradient(140deg, rgba(0,200,255,0.4), rgba(0,100,255,0.2), rgba(0,255,200,0.2));
+  animation-duration: 25s, 7s;
+}
+
+.aurora:nth-child(3) {
+  background: linear-gradient(100deg, rgba(0,255,200,0.3), rgba(0,150,255,0.2), rgba(0,255,150,0.1));
+  animation-duration: 30s, 8s;
+}
+
+@keyframes wave {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(80px) rotate(2deg); }
+  100% { transform: translateY(-80px) rotate(-2deg); }
+}
+
+@keyframes shimmer {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 0.3; }
+}
