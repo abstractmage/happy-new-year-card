@@ -1,0 +1,26 @@
+# зависимости
+node_modules
+.pnpm-store
+.yarn
+.yarn-cache
+
+# сборка
+dist
+build
+
+# VCS
+.git
+.gitignore
+
+# IDE / OS
+.vscode
+.idea
+.DS_Store
+Thumbs.db
+
+# логи
+*.log
+
+# env
+.env
+.env.*
